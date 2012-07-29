@@ -1,0 +1,202 @@
+/* nhs widget styles */
+#az-nhs-widget div, #az-nhs-widget span, 
+#az-nhs-widget h1, #az-nhs-widget h2, #az-nhs-widget h3, 
+#az-nhs-widget h4, #az-nhs-widget h5, #az-nhs-widget h6, 
+#az-nhs-widget p, #az-nhs-widget blockquote, #az-nhs-widget pre,
+#az-nhs-widget abbr, #az-nhs-widget address, #az-nhs-widget cite, #az-nhs-widget code,
+#az-nhs-widget del, #az-nhs-widget dfn, #az-nhs-widget em, #az-nhs-widget img, 
+#az-nhs-widget ins, #az-nhs-widget kbd, #az-nhs-widget q, #az-nhs-widget samp,
+#az-nhs-widget small, #az-nhs-widget strong, #az-nhs-widget sub, #az-nhs-widget sup, #az-nhs-widget var,
+#az-nhs-widget b, #az-nhs-widget i, #az-nhs-widget dl, #az-nhs-widget dt, #az-nhs-widget dd, 
+#az-nhs-widget ol, #az-nhs-widget ul, #az-nhs-widget li, #az-nhs-widget fieldset, #az-nhs-widget form, 
+#az-nhs-widget label, #az-nhs-widget legend, #az-nhs-widget table, #az-nhs-widget caption, #az-nhs-widget tbody, 
+#az-nhs-widget tfoot, #az-nhs-widget thead, #az-nhs-widget tr, #az-nhs-widget th, #az-nhs-widget td {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  list-style:none;
+}
+#az-nhs-widget {
+	border:1px solid #ccc;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	height:328px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px; /*0.7em*/
+	color:#2F2F2F;
+	background:#fff;
+	font:11px/1.231 sans-serif; *font-size:small;
+	position:relative;
+}
+#az-nhs-widget .nhs-widget-inner {
+	padding:8px 8px 16px;
+}
+/* nhs widget generic */
+#az-nhs-widget .nhs-widget-header {
+	margin-bottom: 14px;
+	overflow: hidden;
+}
+#az-nhs-widget .nhs-widget-title {
+	float:right;
+	color:#286CAD;
+	font-size:1.2em;
+	line-height:1.3em;
+}
+#az-nhs-widget .nhs-widget-logo {
+	float:left;
+	color: #286cad;
+	width:auto;
+}
+
+#az-nhs-widget .nhs-widget-logo a,
+#az-nhs-widget .nhs-widget-logo a:hover {
+	text-decoration: none;
+}
+
+#az-nhs-widget .nhs-widget-logo img {
+	float: left;
+}
+
+#az-nhs-widget .nhs-widget-logo span {
+	padding-left: 5px;
+	float: left;
+	padding-top: 2px;
+	line-height: 15px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size:13px;
+}
+#az-nhs-widget a {
+	text-decoration:none;
+	color:#286cad;
+}
+#az-nhs-widget a:hover {
+	text-decoration:underline;	
+}
+#az-nhs-widget img,
+#az-nhs-widget .nhs-widget-addr {
+	display:block;	
+}
+#az-nhs-widget .nhs-widget-btn-wrapper {
+	background:#fff;
+	border:1px solid #ccc;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+	float:left;
+	margin:0 6px 0 0;
+}
+#az-nhs-widget .nhs-widget-btn-wrapper button {
+	background:#286cad;	
+	border:2px solid #fff;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+	color:#fff;
+	font-weight:bold;
+	padding:2px 8px;
+	cursor:pointer;
+}
+#az-nhs-widget .nhs-widget-input {
+	float:left;
+	border:1px solid #ccc;
+	color:#2f2f2f;
+	padding:3px;
+	margin:2px 6px 0 0;
+}
+#az-nhs-widget .nhs-widget-clear {
+	clear:both;	
+}
+#az-nhs-widget .nhs-widget-overflow {
+	overflow:hidden;
+}
+#az-nhs-widget .nhs-widget-error {
+	font-weight:bold;
+	color:#FF2D2D;
+}
+#az-nhs-widget .nhs-widget-loader {
+	background: url(ajax-loader.gif) no-repeat center center;	
+}
+/* nhs widget nav */
+#az-nhs-widget ul.nhs-widget-nav li {
+	float:left;
+	margin:0 2px;
+	position:relative;
+	top:1px;
+	border:1px solid #ccc;
+	background:#fff;
+	background:-webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0.44, rgb(245,245,245)),
+		color-stop(0.82, rgb(222,222,222))
+	);
+	background:-moz-linear-gradient(
+		center top,
+		rgb(245,245,245) 44%,
+		rgb(222,222,222) 82%
+	);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5F5F5, endColorstr=#DEDEDE);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5F5F5, endColorstr=#DEDEDE)";
+	height:22px;
+}
+#az-nhs-widget ul.nhs-widget-nav .nhs-widget-first, 
+#az-nhs-widget ul.nhs-widget-nav .nhs-widget-first a  {
+	margin-left:0;
+	border-top-left-radius:6px 6px;
+	-moz-border-radius-topleft:6px 6px;
+	-webkit-border-top-left-radius:6px 6px;
+}
+#az-nhs-widget ul.nhs-widget-nav .nhs-widget-active {
+	border-bottom:1px solid #fff;
+	background:#fff;	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF)";
+}
+#az-nhs-widget ul.nhs-widget-nav .nhs-widget-active a {
+	color:#286cad;
+}
+#az-nhs-widget ul.nhs-widget-nav a {
+	color:#2f2f2f;
+	padding:4px 8px 4px 10px;
+	display:block;
+	top:1px;
+	left:-1px;
+	position:relative;
+	border-left:1px solid #ccc;
+	font-weight:bold;
+}
+#az-nhs-widget ul.nhs-widget-nav a:hover {
+	text-decoration:none;	
+}
+/* nhs widget tabs */
+#az-nhs-widget .nhs-widget-tabs {
+	border:1px solid #ccc;
+	background:#fff;
+	border-bottom-left-radius:6px 6px;
+	-moz-border-radius-bottomleft:6px 6px;
+	-webkit-border-bottom-left-radius:6px 6px;
+	border-bottom-right-radius:6px 6px;
+	-moz-border-radius-bottomright:6px 6px;
+	-webkit-border-bottom-right-radius:6px 6px;
+	padding:3px 0 0;
+}
+#az-nhs-widget .nhs-widget-tab {
+	padding:5px 8px 8px;
+	overflow:auto;
+	height:232px;
+}
+/* content */
+#az-nhs-widget .nhs-widget-tab p,
+#az-nhs-widget .nhs-widget-tab h2 {
+	margin:0 0 8px;
+}
+#az-nhs-widget .nhs-widget-tab li {
+	margin:3px 0 0;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>NHS A-Z widget example</title>
+<link rel="stylesheet" media="screen" type="text/css" href="nhs.az.widget.css">
+</head>
+<body>
+<div class="az" style="width:600px"></div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="nhs.az.widget.js"></script>
+<script type="text/javascript">
+
+$(function(){
+$('.az').nhsAZWidget({"articles":[{"url":"hearing-impairment","label":"Deafness","children":[{"url":"hearing-impairment/introduction","label":"Introduction"},{"url":"hearing-impairment/symptoms","label":"Symptoms of hearing impairment"},{"url":"hearing-impairment/causes","label":"Causes of hearing impairment"}]}],"headingText":"Deafness"});
+});
+</script>
+</body>
+</html>

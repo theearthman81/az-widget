@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>NHS A-Z widget configuration tool</title>
+<link rel="stylesheet" media="screen" type="text/css" href="nhs.az.config2.css">
+<link rel="stylesheet" media="screen" type="text/css" href="nhs.az.widget.css">
+</head>
+<body>
+<div id="popup">
+	<h2>NHS Health widget configuration</h2>
+	<p>The NHS Choices Health A-Z widget can be configured using this utility. In order to build your widget, you'll need to select a topic, and then add sections, such as Diagnosis, Causes and treatments, which will make up the contents of your widget.</p>
+	<p>To get started, please choose from the two options below. A-Z will produce an alphabetised list of conditions, which you can select from.Subject displays topics according to category - for example, the subject Pregnancy contains topics such as IVF, Labour and Morning Sickness.</p>
+	<p>Each condition is created in a separate widget. If you want to create multiple topics, you'll need to build an individual widget for each topic.</p>
+	<div class="nhs-button-wrapper">
+		<button id="azBtn">a - z</button>
+		<button id="subBtn">subject</button>
+	</div>
+</div>
+<div id="first-page" class="nhs-container">
+	<h1><img src="http://www.nhs.uk/img/header/choices-logo.gif" alt="NHS Choices" width="212" height="35"> A-Z widget configuration tool</h1>
+	<div class="width-holder">
+		<label for="width">width of widget:</label><input type="text" value="" id="width"/>
+	</div>
+	<div class="title-holder">
+		<label for="widget-title">title of widget:</label><input type="text" value="" id="widget-title"/>
+	</div>
+	<ul id="nhs-tree"></ul>
+	<button id="generate">create widget</button>
+</div>
+<div id="second-page" class="nhs-container">
+	<a id="back" href="#">&lt; back to config</a>
+	<p>Below is the instance of the widget</p>
+	<div id="nhs-impl" style="width:600px;margin:auto;"></div>
+	<p>The following is the code for to be placed with the HEAD tag</p>
+	<div class="nhs-code-holder"><textarea id="nhs-head-code" readonly></textarea></div>
+	<p>The following is the code for to be placed where the widget is required</p>
+	<div class="nhs-code-holder"><textarea id="nhs-code" readonly></textarea></div>
+</div>
+<div class="loader"></div>
+<input type="text" id="editLabel"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="nhs.az.config.js"></script>
+<script type="text/javascript" src="nhs.az.widget.js"></script>
+</body>
+</html>
