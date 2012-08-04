@@ -285,7 +285,7 @@ body {
 	padding:5px;
 }
 #nhs-tree, #nhs-tree ul { list-style: none; }
-#nhs-tree .toggler { background-image:url("d.png"); background-repeat:no-repeat; background-color:transparent; background-position:-5px 0; display:block;width:8px;height:16px;float:left; margin-right:5px; }
+#nhs-tree .toggler { background-image:url("../img/d.png"); background-repeat:no-repeat; background-color:transparent; background-position:-5px 0; display:block;width:8px;height:16px;float:left; margin-right:5px; }
 #nhs-tree a.open { background-position:-23px 0; }
 #nhs-tree ul { display:none; }
 #nhs-tree ul.open { display:block; }

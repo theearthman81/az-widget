@@ -7,7 +7,7 @@ var nhsAZDefaults = {
 	serviceURL: 'http://v1.syndication.nhschoices.nhs.uk/conditions',				// az service url to be used
 	apiKey: 'PHRJCDTY',																// az service api key
 	articles: [],																	// article holder
-	imgUrl: 'nhs_choices.gif',														// logo url
+	imgUrl: '../img/nhs_choices.gif',														// logo url
 	titleText: 'conditions',														// title logo
 	headingText: 'NHS Widget',														// heading of widget
 	noResults: 'Sorry please try again later.',										// error message
@@ -18,7 +18,7 @@ var nhsAZDefaults = {
 		var apiKey,
 			rootUrl,
 			rootItems,
-			$el, $ul, $content, $heading;
+			$el, $ul, $content, $heading, $video, $tab;
 			
 		opts = $.extend(true, {}, $.nhsAZWidget.defaults, opts);
 		rootItems = opts.articles;
@@ -29,7 +29,9 @@ var nhsAZDefaults = {
 		$el = $(el).append('<div id="az-nhs-widget"><div class="nhs-widget-inner"></div></div>').find('.nhs-widget-inner');
 		$heading = $el.append('<div class="nhs-widget-header"><div class="nhs-widget-logo"><a href="' + opts.logoUrl + '" target="_blank"><img src="' + opts.imgUrl + '" alt="nhs choices"/><span>' + opts.titleText + '</span></a></div><h2 class="nhs-widget-title">' + opts.headingText + '</h2></div>').find('nhs-widget-title');
 		$ul = $el.append('<ul class="nhs-widget-nav nhs-widget-clear" />').find('.nhs-widget-nav');
-		$content = $el.append('<div class="nhs-widget-tabs nhs-widget-clear"><div class="nhs-widget-tab"></div></div>').find('.nhs-widget-tab');
+		$tab = $el.append('<div class="nhs-widget-tabs nhs-widget-clear"><div class="nhs-widget-tab"><div class="nhs-widget-video"></div><div class="nhs-widget-content"></div></div></div>').find('.nhs-widget-tab');
+		$content = $el.find('.nhs-widget-content');
+		$video = $el.find('.nhs-widget-video');
 		
 		function renderMenu(url, items) {
 			if (!items.children) {
@@ -51,18 +53,29 @@ var nhsAZDefaults = {
 		function renderArticle(url) {
 			url = rootUrl + '/' + url;
 			$content.html('');
+			$video.html('');
 			if (cache[url]) {
 				setTimeout(function () {
-					$content.removeClass('nhs-widget-loader').html(cache[url]);
+					$tab.removeClass('nhs-widget-loader'); 
+					$video.html(cache[url].video);
+					$content.html(cache[url].content);
 				}, 200);
 			} else {
 				getData(url, function(data) {
-					var c = (data && data.query.results && data.query.results.feed && data.query.results.feed.entry && data.query.results.feed.entry.content) ? data.query.results.feed.entry.content.content : '';
+					var entry = data && data.query.results && data.query.results.feed && data.query.results.feed.entry || {},
+						c = $(entry.content && entry.content.content || '').find('a').attr('target', '_blank').end(),
+						vid = $(entry.videoEmbedCodes && entry.videoEmbedCodes.videoEmbedCode || '');
 					if (c) {
-						$content.removeClass('nhs-widget-loader').html(c);
-						cache[url] = c;
+						$tab.removeClass('nhs-widget-loader');
+						$video.append(vid);
+						$content.append(c);
+						cache[url] = {
+							content: c,
+							video: vid
+						};
 					} else {
-						$content.removeClass('nhs-widget-loader').html('<div class="nhs-widget-error">' + opts.noResults + '</div>');
+						$tab.removeClass('nhs-widget-loader');
+						$content.html('<div class="nhs-widget-error">' + opts.noResults + '</div>');
 					}
 				});
 			}
@@ -85,14 +98,14 @@ var nhsAZDefaults = {
 			if ($li.hasClass('nhs-widget-active')) {
 				return false;
 			}
-			$content.addClass('nhs-widget-loader');
+			$tab.addClass('nhs-widget-loader');
 			$ul.find('.nhs-widget-active').removeClass('nhs-widget-active');
 			$li.addClass('nhs-widget-active');
 			renderArticle($a.attr('href'));
 			return false;
 		});
 		
-		$content.addClass('nhs-widget-loader');
+		$tab.addClass('nhs-widget-loader');
 		if (rootItems.length > 1) {
 			var articles = [];
 			for (var i = 0, l = rootItems.length; i < l; i++) {

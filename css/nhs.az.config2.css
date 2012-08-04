@@ -99,7 +99,7 @@ button:hover {
 	padding:0;
 }
 #nhs-tree, #nhs-tree ul { list-style: none; }
-#nhs-tree .toggler { background-image:url("d.png"); background-repeat:no-repeat; background-color:transparent; background-position:-5px 3px; display:block;width:8px;height:16px;float:left; margin-right:5px; }
+#nhs-tree .toggler { background-image:url("../img/d.png"); background-repeat:no-repeat; background-color:transparent; background-position:-5px 3px; display:block;width:8px;height:16px;float:left; margin-right:5px; }
 #nhs-tree a.open { background-position:-23px 3px; }
 #nhs-tree ul { display:none; }
 #nhs-tree ul.open { display:block; }

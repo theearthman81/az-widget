@@ -11,192 +11,208 @@
 #az-nhs-widget ol, #az-nhs-widget ul, #az-nhs-widget li, #az-nhs-widget fieldset, #az-nhs-widget form, 
 #az-nhs-widget label, #az-nhs-widget legend, #az-nhs-widget table, #az-nhs-widget caption, #az-nhs-widget tbody, 
 #az-nhs-widget tfoot, #az-nhs-widget thead, #az-nhs-widget tr, #az-nhs-widget th, #az-nhs-widget td {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-  list-style:none;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  outline:0 !important;
+  font-size:100% !important;
+  vertical-align:baseline !important;
+  background:transparent !important;
+  list-style:none !important;
 }
 #az-nhs-widget {
-	border:1px solid #ccc;
-	-webkit-border-radius:6px;
-	-moz-border-radius:6px;
-	border-radius:6px;
-	height:328px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:11px; /*0.7em*/
-	color:#2F2F2F;
-	background:#fff;
-	font:11px/1.231 sans-serif; *font-size:small;
-	position:relative;
+	border:1px solid #ccc !important;
+	-webkit-border-radius:6px !important;
+	-moz-border-radius:6px !important;
+	border-radius:6px !important;
+	height:328px !important;
+	font-family:Arial, Helvetica, sans-serif !important;
+	font-size:11px !important; /*0.7em*/
+	color:#2F2F2F !important;
+	background:#fff !important;
+	font:11px/1.231 sans-serif !important; *font-size:small !important;
+	position:relative !important;
 }
 #az-nhs-widget .nhs-widget-inner {
-	padding:8px 8px 16px;
+	padding:8px 8px 16px !important;
 }
 /* nhs widget generic */
 #az-nhs-widget .nhs-widget-header {
-	margin-bottom: 14px;
-	overflow: hidden;
+	margin-bottom: 14px !important;
+	overflow: hidden !important;
 }
 #az-nhs-widget .nhs-widget-title {
-	float:right;
-	color:#286CAD;
-	font-size:1.2em;
-	line-height:1.3em;
+	float:right !important;
+	color:#286CAD !important;
+	font-size:1.2em !important;
+	line-height:1.3em !important;
 }
 #az-nhs-widget .nhs-widget-logo {
-	float:left;
-	color: #286cad;
-	width:auto;
+	float:left !important;
+	color: #286cad !important;
+	width:auto !important;
 }
 
 #az-nhs-widget .nhs-widget-logo a,
 #az-nhs-widget .nhs-widget-logo a:hover {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 #az-nhs-widget .nhs-widget-logo img {
-	float: left;
+	float: left !important;
 }
 
 #az-nhs-widget .nhs-widget-logo span {
-	padding-left: 5px;
-	float: left;
-	padding-top: 2px;
-	line-height: 15px;
-	text-transform: uppercase;
-	white-space: nowrap;
-	font-size:13px;
+	padding-left: 5px !important;
+	float: left !important;
+	padding-top: 2px !important;
+	line-height: 15px !important;
+	text-transform: uppercase !important;
+	white-space: nowrap !important;
+	font-size:13px !important;
 }
 #az-nhs-widget a {
-	text-decoration:none;
-	color:#286cad;
+	text-decoration:none !important;
+	color:#286cad !important;
 }
 #az-nhs-widget a:hover {
-	text-decoration:underline;	
+	text-decoration:underline !important;	
 }
 #az-nhs-widget img,
 #az-nhs-widget .nhs-widget-addr {
-	display:block;	
+	display:block !important;	
 }
 #az-nhs-widget .nhs-widget-btn-wrapper {
-	background:#fff;
-	border:1px solid #ccc;
-	-webkit-border-radius:12px;
-	-moz-border-radius:12px;
-	border-radius:12px;
-	float:left;
-	margin:0 6px 0 0;
+	background:#fff !important;
+	border:1px solid #ccc !important;
+	-webkit-border-radius:12px !important;
+	-moz-border-radius:12px !important;
+	border-radius:12px !important;
+	float:left !important;
+	margin:0 6px 0 0 !important;
 }
 #az-nhs-widget .nhs-widget-btn-wrapper button {
-	background:#286cad;	
-	border:2px solid #fff;
-	-webkit-border-radius:12px;
-	-moz-border-radius:12px;
-	border-radius:12px;
-	color:#fff;
-	font-weight:bold;
-	padding:2px 8px;
-	cursor:pointer;
+	background:#286cad !important;	
+	border:2px solid #fff !important;
+	-webkit-border-radius:12px !important;
+	-moz-border-radius:12px !important;
+	border-radius:12px !important;
+	color:#fff !important;
+	font-weight:bold !important;
+	padding:2px 8px !important;
+	cursor:pointer !important;
 }
 #az-nhs-widget .nhs-widget-input {
-	float:left;
-	border:1px solid #ccc;
-	color:#2f2f2f;
-	padding:3px;
-	margin:2px 6px 0 0;
+	float:left !important;
+	border:1px solid #ccc !important;
+	color:#2f2f2f !important;
+	padding:3px !important;
+	margin:2px 6px 0 0 !important;
 }
 #az-nhs-widget .nhs-widget-clear {
-	clear:both;	
+	clear:both !important;	
 }
 #az-nhs-widget .nhs-widget-overflow {
-	overflow:hidden;
+	overflow:hidden !important;
 }
 #az-nhs-widget .nhs-widget-error {
-	font-weight:bold;
-	color:#FF2D2D;
+	font-weight:bold !important;
+	color:#FF2D2D !important;
 }
 #az-nhs-widget .nhs-widget-loader {
-	background: url(ajax-loader.gif) no-repeat center center;	
+	background: url(../img/ajax-loader.gif) no-repeat center center !important;	
 }
 /* nhs widget nav */
 #az-nhs-widget ul.nhs-widget-nav li {
-	float:left;
-	margin:0 2px;
-	position:relative;
-	top:1px;
-	border:1px solid #ccc;
-	background:#fff;
+	float:left !important;
+	margin:0 2px !important;
+	position:relative !important;
+	top:1px !important;
+	border:1px solid #ccc !important;
+	background:#fff !important;
 	background:-webkit-gradient(
 		linear,
 		left top,
 		left bottom,
 		color-stop(0.44, rgb(245,245,245)),
 		color-stop(0.82, rgb(222,222,222))
-	);
+	) !important;
 	background:-moz-linear-gradient(
 		center top,
 		rgb(245,245,245) 44%,
 		rgb(222,222,222) 82%
-	);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5F5F5, endColorstr=#DEDEDE);
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5F5F5, endColorstr=#DEDEDE)";
-	height:22px;
+	) !important;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5F5F5, endColorstr=#DEDEDE) !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5F5F5, endColorstr=#DEDEDE)" !important;
+	height:22px !important;
 }
 #az-nhs-widget ul.nhs-widget-nav .nhs-widget-first, 
 #az-nhs-widget ul.nhs-widget-nav .nhs-widget-first a  {
-	margin-left:0;
-	border-top-left-radius:6px 6px;
-	-moz-border-radius-topleft:6px 6px;
-	-webkit-border-top-left-radius:6px 6px;
+	margin-left:0 !important;
+	border-top-left-radius:6px 6px !important;
+	-moz-border-radius-topleft:6px 6px !important;
+	-webkit-border-top-left-radius:6px 6px !important;
 }
 #az-nhs-widget ul.nhs-widget-nav .nhs-widget-active {
-	border-bottom:1px solid #fff;
-	background:#fff;	
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF);
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF)";
+	border-bottom:1px solid #fff !important;
+	background:#fff !important;	
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF) !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF)" !important;
 }
 #az-nhs-widget ul.nhs-widget-nav .nhs-widget-active a {
-	color:#286cad;
+	color:#286cad !important;
 }
 #az-nhs-widget ul.nhs-widget-nav a {
-	color:#2f2f2f;
-	padding:4px 8px 4px 10px;
-	display:block;
-	top:1px;
-	left:-1px;
-	position:relative;
-	border-left:1px solid #ccc;
-	font-weight:bold;
+	color:#2f2f2f !important;
+	padding:4px 8px 4px 10px !important;
+	display:block !important;
+	top:1px !important;
+	left:-1px !important;
+	position:relative !important;
+	border-left:1px solid #ccc !important;
+	font-weight:bold !important;
 }
 #az-nhs-widget ul.nhs-widget-nav a:hover {
-	text-decoration:none;	
+	text-decoration:none !important;	
 }
 /* nhs widget tabs */
 #az-nhs-widget .nhs-widget-tabs {
-	border:1px solid #ccc;
-	background:#fff;
-	border-bottom-left-radius:6px 6px;
-	-moz-border-radius-bottomleft:6px 6px;
-	-webkit-border-bottom-left-radius:6px 6px;
-	border-bottom-right-radius:6px 6px;
-	-moz-border-radius-bottomright:6px 6px;
-	-webkit-border-bottom-right-radius:6px 6px;
-	padding:3px 0 0;
+	border:1px solid #ccc !important;
+	background:#fff !important;
+	border-bottom-left-radius:6px 6px !important;
+	-moz-border-radius-bottomleft:6px 6px !important;
+	-webkit-border-bottom-left-radius:6px 6px !important;
+	border-bottom-right-radius:6px 6px !important;
+	-moz-border-radius-bottomright:6px 6px !important;
+	-webkit-border-bottom-right-radius:6px 6px !important;
+	padding:3px 0 0 !important;
 }
 #az-nhs-widget .nhs-widget-tab {
-	padding:5px 8px 8px;
-	overflow:auto;
-	height:232px;
+	padding:5px 8px 8px !important;
+	overflow:auto !important;
+	height:232px !important;
 }
 /* content */
 #az-nhs-widget .nhs-widget-tab p,
 #az-nhs-widget .nhs-widget-tab h2 {
-	margin:0 0 8px;
+	margin:0 0 8px !important;
 }
 #az-nhs-widget .nhs-widget-tab li {
-	margin:3px 0 0;
+	margin:3px 0 0 !important;
+}
+#az-nhs-widget .nhs-widget-video {
+	float:left !important;
+	width:412px !important;
+	zoom:1 !important;
+}
+#az-nhs-widget .nhs-widget-content ul {
+	margin-left:15px !important;
+}
+#az-nhs-widget .nhs-widget-content ul,
+#az-nhs-widget .nhs-widget-content li {
+	list-style:square !important;
+}
+#az-nhs-widget .nhs-widget-content h3 {
+	/*color:#286CAD !important;*/
+	margin-bottom:10px !important;
 }
