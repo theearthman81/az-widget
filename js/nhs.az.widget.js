@@ -18,6 +18,7 @@ var nhsAZDefaults = {
 		var apiKey,
 			rootUrl,
 			rootItems,
+			currentHref,
 			$el, $ul, $content, $heading, $video, $tab;
 			
 		opts = $.extend(true, {}, $.nhsAZWidget.defaults, opts);
@@ -25,6 +26,7 @@ var nhsAZDefaults = {
 		rootUrl = opts.serviceURL + '/articles';
 		apiKey = opts.apiKey;
 		cache = {};
+		currentHref = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1)
 		
 		$el = $(el).append('<div id="az-nhs-widget"><div class="nhs-widget-inner"></div></div>').find('.nhs-widget-inner');
 		$heading = $el.append('<div class="nhs-widget-header"><div class="nhs-widget-logo"><a href="' + opts.logoUrl + '" target="_blank"><img src="' + opts.imgUrl + '" alt="nhs choices"/><span>' + opts.titleText + '</span></a></div><h2 class="nhs-widget-title">' + opts.headingText + '</h2></div>').find('nhs-widget-title');
@@ -52,20 +54,21 @@ var nhsAZDefaults = {
 			
 		function renderArticle(url) {
 			url = rootUrl + '/' + url;
-			$content.html('');
-			$video.html('');
+			$content.empty();
+			$video.empty();
 			if (cache[url]) {
 				setTimeout(function () {
 					$tab.removeClass('nhs-widget-loader'); 
-					$video.html(cache[url].video);
-					$content.html(cache[url].content);
+					$video.append(cache[url].video);
+					$content.append(cache[url].content);
 				}, 200);
 			} else {
 				getData(url, function(data) {
-					var entry = data && data.query.results && data.query.results.feed && data.query.results.feed.entry || {},
-						c = $(entry.content && entry.content.content || '').find('a').attr('target', '_blank').end(),
-						vid = $(entry.videoEmbedCodes && entry.videoEmbedCodes.videoEmbedCode || '');
-					if (c) {
+					var entry = data && data.query.results && data.query.results.feed ? data.query.results.feed.entry : {},
+						c = $(entry.content ? entry.content.content : '').find('a').attr('target', '_blank').end(),
+						vid = $(entry.videoEmbedCodes && entry.videoEmbedCodes.videoEmbedCode);
+						
+					if (c.length) {
 						$tab.removeClass('nhs-widget-loader');
 						$video.append(vid);
 						$content.append(c);
@@ -101,7 +104,7 @@ var nhsAZDefaults = {
 			$tab.addClass('nhs-widget-loader');
 			$ul.find('.nhs-widget-active').removeClass('nhs-widget-active');
 			$li.addClass('nhs-widget-active');
-			renderArticle($a.attr('href'));
+			renderArticle($a.attr('href').replace(currentHref, ''));
 			return false;
 		});
 		

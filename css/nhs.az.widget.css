@@ -203,7 +203,12 @@
 #az-nhs-widget .nhs-widget-video {
 	float:left !important;
 	width:412px !important;
-	zoom:1 !important;
+	zoom:1;
+	*float:none !important; /* IE 7 and below */
+   _float:none !important; /* IE 6 and below */
+}
+#az-nhs-widget .nhs-widget-content {
+	zoom:1;
 }
 #az-nhs-widget .nhs-widget-content ul {
 	margin-left:15px !important;
