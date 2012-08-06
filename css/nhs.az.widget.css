@@ -194,7 +194,8 @@
 }
 /* content */
 #az-nhs-widget .nhs-widget-tab p,
-#az-nhs-widget .nhs-widget-tab h2 {
+#az-nhs-widget .nhs-widget-tab h2,
+#az-nhs-widget .nhs-widget-tab ul {
 	margin:0 0 8px !important;
 }
 #az-nhs-widget .nhs-widget-tab li {
@@ -202,7 +203,7 @@
 }
 #az-nhs-widget .nhs-widget-video {
 	float:left !important;
-	width:412px !important;
+	width:418px !important;
 	zoom:1;
 	*float:none !important; /* IE 7 and below */
    _float:none !important; /* IE 6 and below */
