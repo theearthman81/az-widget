@@ -222,3 +222,10 @@
 	/*color:#286CAD !important;*/
 	margin-bottom:10px !important;
 }
+#az-nhs-widget .nhs-widget-content dt {
+	font-weight: bold !important;
+}
+#az-nhs-widget .nhs-widget-content dt,
+#az-nhs-widget .nhs-widget-content dd {
+	margin: 0 0 3px !important;
+}
