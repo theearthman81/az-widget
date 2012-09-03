@@ -8,11 +8,33 @@
 <body>
 <div class="az" style="width:600px"></div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="../js/nhs.az.widget.js"></script>
+<script type="text/javascript" src="../js/nhs.az.widget.min.js"></script>
 <script type="text/javascript">
 
 $(function(){
-$('.az').nhsAZWidget({"articles":[{"url":"hearing-impairment","label":"Deafness","children":[{"url":"hearing-impairment/introduction","label":"Introduction"},{"url":"hearing-impairment/symptoms","label":"Symptoms of hearing impairment"},{"url":"hearing-impairment/causes","label":"Causes of hearing impairment"}]}],"headingText":"Deafness"});
+$('.az').nhsAZWidget(	{
+	   "articles":[
+	      {
+	         "url":"hearing-impairment",
+	         "label":"Deafness",
+	         "children":[
+	            {
+	               "url":"hearing-impairment/introduction",
+	               "label":"Introduction"
+	            },
+	            {
+	               "url":"hearing-impairment/symptoms",
+	               "label":"Symptoms of hearing impairment"
+	            },
+	            {
+	               "url":"hearing-impairment/causes",
+	               "label":"Causes of hearing impairment"
+	            }
+	         ]
+	      }
+	   ],
+	   "headingText":"Deafness"
+	});
 });
 </script>
 </body>
